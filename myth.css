@@ -1,0 +1,142 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(235, 215, 235);
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 15px;
+  color: rgb(66, 0, 66);
+  line-height: 1.3;
+}
+
+a {
+  color: inherit;
+}
+
+/* --- topbar --- */
+
+.topbar {
+  background: rgb(66, 0, 66);
+  color: rgb(235, 215, 235);
+  border-radius: 10px;
+}
+
+.topbar a {
+  text-decoration: none;
+}
+
+.topbar-logo {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  padding: 0.5em 0;
+}
+
+.topbar-nav {
+  text-align: center;
+  padding-bottom: 1em;
+  line-height: 1.6;
+}
+
+.topbar-nav a {
+  display: inline-block;
+  margin: 0 12px;
+  transition: color .3s;
+}
+
+.topbar-nav a:hover {
+  color: plum;
+}
+
+/* --- container --- */
+
+.container {
+  padding: 0 1em;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+/* --- sidebar --- */
+
+.sidebar {
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  background: ;
+}
+
+.sidebar a {
+  display: block;
+  width: 50%;
+  text-decoration: none;
+  transition: opacity .3s;
+  padding: 0.6em 0;
+}
+
+.sidebar a::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-right: 1.2em;
+  background: url(img/home.svg) center center / contain no-repeat;
+  transition: opacity .3s;
+}
+
+.sidebar .sidebar-letter::before {
+  background-image: url(img/letter.svg);
+}
+
+.sidebar .sidebar-calendar::before {
+  background-image: url(img/calendar.svg);
+}
+
+.sidebar .sidebar-friend::before {
+  background-image: url(img/friend2.svg);
+}
+
+.sidebar .sidebar-group::before {
+  background-image: url(img/friend.svg);
+}
+
+.sidebar a:hover {
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
+.sidebar a:hover::before {
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 593px) {
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 1.5em;
+  }
+
+  .topbar-logo,
+  .topbar-nav {
+    padding: 0;
+  }
+
+  .topbar-nav a {
+    margin: 0 1.3em;
+  }
+
+  .container {
+
+  }
+
+}
