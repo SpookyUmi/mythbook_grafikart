@@ -69,7 +69,6 @@ a {
   font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
-  background: ;
 }
 
 .sidebar a {
@@ -133,10 +132,6 @@ a {
 
   .topbar-nav a {
     margin: 0 1.3em;
-  }
-
-  .container {
-
   }
 
 }
