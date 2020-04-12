@@ -12,6 +12,7 @@ body {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 /* --- topbar --- */
@@ -20,10 +21,6 @@ a {
   background: rgb(66, 0, 66);
   color: rgb(235, 215, 235);
   border-radius: 10px;
-}
-
-.topbar a {
-  text-decoration: none;
 }
 
 .topbar-logo {
@@ -53,7 +50,7 @@ a {
 
 .container {
   padding: 0 1em;
-  max-width: 1080px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -69,13 +66,13 @@ a {
   font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .sidebar a {
   display: block;
   width: 50%;
-  text-decoration: none;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   padding: 0.6em 0;
 }
 
@@ -108,11 +105,166 @@ a {
 }
 
 .sidebar a:hover {
-  opacity: 0.5;
   text-decoration: underline;
+  opacity: 0.5;
 }
 
 .sidebar a:hover::before {
+  opacity: 0.5;
+}
+
+.card {
+  border: solid 1px plum;
+  background: plum;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.3em;
+}
+
+.card-header {
+  padding: 10px;
+  position: relative;
+}
+
+.card-header-avatar{
+  padding-left: 4.2em;
+}
+
+.card-avatar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgb(66, 0, 66);
+  margin: 0.2em 0;
+}
+
+.card-time {
+  color: rgba(66, 0, 66, .7);
+  font-size: 0.8rem;
+}
+
+.card-body {
+  padding: 0 10px 30px 10px;
+}
+
+.card-body .yolo {
+  width: calc(100% + 20px);
+  display: block;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.card-body p:first-child {
+  margin-top: 0;
+}
+
+.card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.card-footer {
+  border-top: solid 1px hsl(300, 47%, 65%);
+  background: hsl(300, 47%, 65%);
+  display: flex;
+  padding: 10px 10px;
+  font-size: .8rem;
+  color: rgba(66, 0, 66, .7);
+  justify-content: space-between;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+.card-like::before,
+.card-comments::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  opacity: .7;
+  background: url(img/like.svg) center center / contain no-repeat;
+}
+
+.card-comments::before {
+   background: url(img/blog.svg) center center / contain no-repeat;
+}
+
+.sidebar-title {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: rgb(66, 0, 66);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sidebar-title::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-top: 5px;
+  background: rgb(66, 0, 66);
+}
+
+.friend {
+  margin: 14px 0;
+  display: flex;
+}
+
+.friend-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.friend-avatar {
+  width: 70px;
+  height: 70px;
+  flex: none;
+  margin-right: 10px;
+}
+
+.friend-name {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.friend-name:hover {
+  text-decoration: underline;
+}
+
+.friend-add {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: auto;
+  margin-bottom: 3px;
+}
+
+.friend-add:hover {
+  text-decoration: underline;
+}
+
+.friend-add::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 18px;
+  height: 13px;
+  background: url(img/add-friend.svg) center center / contain no-repeat;
+}
+
+.friend-connections {
+  font-size: 0.9rem;
   opacity: 0.5;
 }
 
@@ -133,5 +285,40 @@ a {
   .topbar-nav a {
     margin: 0 1.3em;
   }
+
+}
+
+@media only screen and (min-width: 950px) {
+  .site {
+    display: flex;
+  }
+
+  .sidebar {
+    display: block;
+    flex: none;
+    width: 180px;
+  }
+
+  .sidebar a {
+    width: 100%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+
+  .card {
+    max-width: 600px;
+  }
+
+  .aside {
+    max-width: 400px;
+  }
+
 
 }
