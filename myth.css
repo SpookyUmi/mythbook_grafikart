@@ -144,6 +144,10 @@ a {
   margin: 0.2em 0;
 }
 
+.card-title a:hover {
+  opacity: 0.5;
+}
+
 .card-time {
   color: rgba(66, 0, 66, .7);
   font-size: 0.8rem;
