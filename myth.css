@@ -113,6 +113,8 @@ a {
   opacity: 0.5;
 }
 
+/* --- main --- */
+
 .card {
   border: solid 1px plum;
   background: plum;
@@ -142,6 +144,10 @@ a {
   font-size: 1.2rem;
   color: rgb(66, 0, 66);
   margin: 0.2em 0;
+}
+
+.card-title a {
+  transition: opacity 0.3s;
 }
 
 .card-title a:hover {
@@ -201,6 +207,8 @@ a {
 .card-comments::before {
    background: url(img/blog.svg) center center / contain no-repeat;
 }
+
+/* --- aside --- */
 
 .sidebar-title {
   margin-top: 1em;
@@ -312,8 +320,7 @@ a {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-left: 0px;
-    margin-right: 20px;
+    margin-right: 30px;
   }
 
   .card {
